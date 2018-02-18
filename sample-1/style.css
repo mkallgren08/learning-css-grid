@@ -22,8 +22,19 @@ body{
 
 } */
 
+.inline-grid{
+  display: inline-grid;
+  grid-template-columns: 30px 15px auto 30px 15px;
+  grid-template-rows: 20px auto 45px;
+  grid-column: 3/4;
+  grid-row: 3/span 1;
+
+}
+
 .item{
     border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .item-a {
@@ -34,18 +45,28 @@ body{
     background-color: red;
     border-bottom-right-radius: 15px;
   }
-  .item-b {
+
+.item-b {
     /* grid-area: main; */
     background-color: blue;
+    margin: 2px;
   }
-  .item-c {
+
+.item-c {
     /* grid-area: sidebar; */
     background-color: yellow;
   }
-  .item-d {
+
+.item-d {
     /* grid-area: footer; */
     background-color: green;
   }
+
+.item-e{
+  grid-column: 3/4;
+  grid-row: 2/span 1;
+  background-color: aqua;
+}
 
 .parent{
     height: 400px;

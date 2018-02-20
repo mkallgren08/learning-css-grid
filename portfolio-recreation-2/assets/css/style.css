@@ -6,6 +6,19 @@ body{
     border: 1px solid black;
 } */
 
+#bio{
+    grid-area: bio;
+    margin: 5px 10px;
+}
+
+#bio-and-headshot{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: minmax(200px, 500px) auto;
+    grid-template-rows: auto;
+    grid-template-areas: "headshot bio";
+}
+
 .body-wrapper{
     display: grid;
     grid-template-columns: 5% 90% 5%;
@@ -67,8 +80,9 @@ body{
 }
 
 #headshot{
+    grid-area: headshot;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .headshot-wrapper{
@@ -154,6 +168,11 @@ body{
 }
 
 @media screen and (max-width: 1300px){
+    #headshot{
+        height: 100%;
+        width: auto;
+    }
+
     .mainbody{
         background-color: lightgrey; 
         grid-template-columns: 2% 96% 2%;
@@ -163,5 +182,22 @@ body{
             ". main-panel-wrapper ."
             ". connect-panel-wrapper ."
             ". . .";
+    }
+}
+
+@media screen and (max-width: 630px){
+    #headshot{
+        height: 100%;
+        width: auto;
+    }
+
+    #bio-and-headshot{
+        display: grid;
+        justify-items: center;
+        grid-template-rows: minmax(200px, 500px) auto;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "headshot"
+            "bio";
     }
 }

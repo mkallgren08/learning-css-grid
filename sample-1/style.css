@@ -10,7 +10,7 @@ body{
     grid-template-columns: 40px 50px auto 50px 40px;
     grid-template-rows: 25% 100px auto;
     grid-template-areas: 
-    "header header header header header"
+    "header header header2 header2 header2"
     "main main main . sidebar"
     ". footer footer footer footer";
   }
@@ -29,6 +29,11 @@ body{
   grid-column: 3/4;
   grid-row: 3/span 1;
 
+  grid-template-areas: 
+  ". . . . ."
+  ". . item-E-area . ."
+  ". . . . ."
+
 }
 
 .item{
@@ -38,33 +43,34 @@ body{
 }
 
 .item-a {
-    /* grid-area: header;  */
-    grid-column: 1/2;
-    grid-row: 1/span 2;
+    grid-area: header; 
+    /* grid-column: 1/2;
+    grid-row: 1/span 2; */
     
     background-color: red;
     border-bottom-right-radius: 15px;
   }
 
 .item-b {
-    /* grid-area: main; */
+    grid-area: header2;
     background-color: blue;
     margin: 2px;
   }
 
 .item-c {
-    /* grid-area: sidebar; */
+    grid-area: main;
     background-color: yellow;
   }
 
 .item-d {
-    /* grid-area: footer; */
+    grid-area: sidebar;
     background-color: green;
   }
 
 .item-e{
-  grid-column: 3/4;
-  grid-row: 2/span 1;
+  /* grid-column: 3/4;
+  grid-row: 2/span 1; */
+  grid-area: item-E-area;
   background-color: aqua;
 }
 

@@ -104,7 +104,7 @@ body{
 
 .mainbody{
     display: inline-grid;
-    background-color: lightgrey;
+    background-color: grey;
     /* grid-area: 2/2/3/3; */
     grid-area: mainbody;
 
